@@ -1,4 +1,4 @@
-import { Task } from "./task.model";
+import { Task } from "./task.model.js";
 
 const createTask = async (req, res) => {
   const task = await Task.create({

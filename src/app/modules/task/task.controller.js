@@ -1,4 +1,5 @@
-import { CatchAsync } from "../../utils/CatchAsync";
+import { CatchAsync } from "../../utils/CatchAsync.js";
+import { TaskService } from "./task.service.js";
 
 const createTask = CatchAsync(async (req, res) => {
   const task = await TaskService.createTask(req.body);

@@ -1,7 +1,7 @@
 import { Router } from "express";
-import { UserRoutes } from "../modules/users/user.route";
-import { TaskRoutes } from "../modules/task/task.route";
-import { AuthRoutes } from "../modules/auth/auth.route";
+import { UserRoutes } from "../modules/users/user.route.js";
+import { TaskRoutes } from "../modules/task/task.route.js";
+import { AuthRoutes } from "../modules/auth/auth.route.js";
 
 export const router = Router();
 const modulesRoutes = [

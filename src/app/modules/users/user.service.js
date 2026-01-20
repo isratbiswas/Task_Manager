@@ -1,6 +1,6 @@
 import bcryptjs from "bcryptjs";
-import { User } from "./user.model";
-import { envVars } from "../../config/env";
+import { User } from "./user.model.js";
+import { envVars } from "../../config/env.js";
 
 const createUser = async (payload) => {
   const { email, password, name } = payload;

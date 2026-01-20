@@ -1,7 +1,10 @@
-import { CatchAsync } from "../../utils/CatchAsync";
+import { CatchAsync } from "../../utils/CatchAsync.js";
+import { setAuthCookie } from "../../utils/setCookies.js";
+import { AuthService } from "./auth.service.js";
 
 const login = CatchAsync(async (req, res) => {
   const loginInfo = await AuthService.login(req.body);
+  setAuthCookie(res, { accessToken: loginInfo.accessToken });
   sendResponse(res, {
     statusCode: 200,
     success: true,
