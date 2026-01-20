@@ -1,9 +1,9 @@
 import { Task } from "./task.model.js";
 
-const createTask = async (req, res) => {
+const createTask = async ({ title, userId }) => {
   const task = await Task.create({
-    title: req.body.title,
-    user: req.user.id,
+    title,
+    user: userId,
   });
   return task;
 };
